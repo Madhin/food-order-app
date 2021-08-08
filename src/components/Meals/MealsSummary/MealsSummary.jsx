@@ -6,13 +6,15 @@ const MealsSummary = () => {
     <section className = {styles.summary}>
       <h2>Delicious food, Delivered to you</h2>
       <p>
-        Choose your favorite meal from our broad selection
-        and enjoy a delicious lunch or dinner at home.
+      The concept of Hussains Restaurant arose from a need to challenge the current norm in the local dining scene.
       </p>
       <p>
-        All our meals are cooked with high-quality ingredients, just-in-time and
-        of course by experienced chefs!
+      We manage highly talented and experienced chefs that aim to provide a tantalizing array of tastes and aromas from the heart of the Indian Subcontinent.
       </p>
+      <p>
+      Choose your favorite meal from our broad selection and enjoy a delicious lunch or dinner at home.
+      </p>
+
     </section>
   )
 }
