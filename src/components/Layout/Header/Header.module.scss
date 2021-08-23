@@ -32,5 +32,13 @@
 
 .name{
   font-family: 'Fondamento', cursive;
-  font-size: 4.5vw;
+  font-size: 4vw;
+}
+
+@media screen and (max-width: 420px) {
+
+  .name{
+    font-size: 9vw;
+  }
+
 }

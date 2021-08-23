@@ -4,6 +4,11 @@ import Input from '../../UI/Input/Input'
 
 
 const MealForm = (props) => {
+  const submitHandler = event => {
+    event.preventDefault();
+  };
+
+  
   return (
    <form className = {styles.form}>
      <Input label = "Amount" input = {{

@@ -4,7 +4,7 @@ import foodImage from '../../../assets/hussains.jpg'
 import CartButton from '../CartButton/CartButton'
 
 const Header = (props) => {
-  return <Fragment>
+  return <>
     <header className= {styles.header}>
     <h1 className = {styles.name}>hussains</h1>
      <CartButton  onClick ={props.onShowCart}/>
@@ -12,7 +12,7 @@ const Header = (props) => {
     <div className = {styles.foodimage}>
       <img src = {foodImage} alt = "Food"/>
     </div>
-    </Fragment> 
+    </> 
 }
 
 export default Header
