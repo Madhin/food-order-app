@@ -7,7 +7,7 @@ const DUMMY_MEALS = [
   {
     id: 'm1',
     name: 'Chicken Tikka Biryani',
-    description: 'traditional festive dish prepared with basmati rice in clarified better with delicate herbs and spices. Served with vegetable curry.',
+    description: 'Traditional festive dish prepared with basmati rice in clarified better with delicate herbs and spices. Served with vegetable curry.',
     price: 11.95,
   },
   {
@@ -33,6 +33,7 @@ const DUMMY_MEALS = [
 const AvailableMeals = () => {
   const mealsList = DUMMY_MEALS.map(meal => <MealItem 
     key = {meal.id} 
+    id = {meal.id}
     name = {meal.name} 
     description = {meal.description} 
     price = {meal.price} />)
