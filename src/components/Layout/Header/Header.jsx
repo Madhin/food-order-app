@@ -2,12 +2,13 @@ import React, { Fragment } from 'react'
 import styles from './Header.module.scss'
 import foodImage from '../../../assets/hussains.jpg'
 import CartButton from '../CartButton/CartButton'
+import HeaderCart from '../HeaderCart/HeaderCart'
 
 const Header = (props) => {
   return <>
     <header className= {styles.header}>
     <h1 className = {styles.name}>hussains</h1>
-     <CartButton  onClick ={props.onShowCart}/>
+     <HeaderCart  onClick ={props.onShowCart}/>
     </header>
     <div className = {styles.foodimage}>
       <img src = {foodImage} alt = "Food"/>
