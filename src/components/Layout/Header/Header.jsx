@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styles from './Header.module.scss'
-import foodImage from '../../../assets/hussains.jpg'
+import foodImage from '../../../assets/restaurant.JPG'
 import CartButton from '../CartButton/CartButton'
 import HeaderCart from '../HeaderCart/HeaderCart'
 

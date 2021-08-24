@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styles from './AvailableMeals.module.scss'
 import Card from '../../UI/Card/Card';
 import MealItem from '../MealItem/MealItem';
@@ -31,7 +31,33 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-  const mealsList = DUMMY_MEALS.map(meal => <MealItem 
+
+  const [meals, setMeals] = useState([]);
+
+  useEffect(() => {
+    const fetchMeals = async () => {
+      const response = await fetch('https://hussains-46374-default-rtdb.firebaseio.com/Menu/Appetizers.json');
+      const responseData = await response.json();
+      const loadedMeals = [];
+
+      for (const key in responseData) {
+        loadedMeals.push({
+          id: key,
+          name: responseData[key].Name,
+          description: responseData[key].Description,
+          price: responseData[key].Price,
+        });
+      }
+      setMeals(loadedMeals);
+    };
+
+    fetchMeals();
+  }, []);
+
+  console.log(meals)
+
+
+  const mealsList = meals.map((meal) => <MealItem 
     key = {meal.id} 
     id = {meal.id}
     name = {meal.name} 
