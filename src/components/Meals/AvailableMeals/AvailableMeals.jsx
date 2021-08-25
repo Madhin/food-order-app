@@ -33,11 +33,13 @@ const DUMMY_MEALS = [
 const AvailableMeals = () => {
 
   const [meals, setMeals] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch('https://hussains-46374-default-rtdb.firebaseio.com/Menu/Appetizers.json');
+      const response = await fetch('https://hussains-46374-default-rtdb.firebaseio.com/Menu.json');
       const responseData = await response.json();
+      console.log(responseData)
       const loadedMeals = [];
 
       for (const key in responseData) {
@@ -49,6 +51,7 @@ const AvailableMeals = () => {
         });
       }
       setMeals(loadedMeals);
+      setLoading(false);
     };
 
     fetchMeals();
@@ -56,8 +59,14 @@ const AvailableMeals = () => {
 
   console.log(meals)
 
+  if (loading) {
+    return( <section className ={styles.loading}>
+      <p>Loading...</p>
+    </section>
+    );
+  }
 
-  const mealsList = meals.map((meal) => <MealItem 
+  const mealsList = DUMMY_MEALS.map((meal) => <MealItem 
     key = {meal.id} 
     id = {meal.id}
     name = {meal.name} 
