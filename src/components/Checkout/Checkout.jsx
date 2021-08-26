@@ -2,8 +2,13 @@ import React from 'react'
 import styles from './Checkout.module.scss'
 
 const Checkout = (props) => {
+
+  const confirmHandler = (e) => {
+    e.preventDefault();
+  }
+  
   return (
-      <form>
+      <form onSubmit={confirmHandler}>
         <div className = {styles.control}>
         <label htmlFor ='name'>
           Your Name

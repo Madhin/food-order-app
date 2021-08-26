@@ -15,6 +15,10 @@ const Cart = (props) => {
   const orderHandler = () => {
     setCheckout(true)
   }
+
+  const cancelHandler = () => {
+    setCheckout(false)
+  }
   const totalAmount = `£${cartCtx.totalAmount.toFixed(2)}`
   const hasItems = cartCtx.items.length > 0;
   const modalAction = <div className = {styles.actions}>
@@ -34,7 +38,7 @@ const Cart = (props) => {
           {totalAmount}
         </span>
       </div>
-      {checkout && <Checkout onCancel = {props.onClose}/>}
+      {checkout && <Checkout onCancel = {cancelHandler}/>}
       {!checkout && modalAction}
       
     </Modal>

@@ -1,6 +1,6 @@
 .form {
   margin: 1rem 0;
-  height: 25rem;
+  height: 30rem;
   overflow: scroll;
 }
 
@@ -35,7 +35,7 @@
   background-color: transparent;
   border: none;
   border-radius: 25px;
-  padding: 0.5rem 2rem; 
+  padding: 0.5rem 2rem;
 }
 
 .actions button:hover,
@@ -63,3 +63,10 @@
   background-color: #ffeff1;
 }
 
+@media screen and (max-width: 420px) {
+  .form {
+    margin: 1rem 0;
+    height: 35rem;
+    overflow: scroll;
+  }
+}

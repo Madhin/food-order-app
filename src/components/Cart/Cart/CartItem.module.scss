@@ -63,3 +63,12 @@
   background-color: #8a2b06;
   color: white;
 }
+
+@media screen and (max-width: 420px) {
+
+  .cartItem h2 {
+    font-size:1em;
+  }
+  
+
+}

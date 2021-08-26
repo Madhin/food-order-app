@@ -57,3 +57,21 @@
     transform: scale(1);
   }
 }
+
+@media screen and (max-width: 420px) {
+
+  .button {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #4d1601;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    font-weight: bold;
+    width:35vw;
+  }
+
+}
